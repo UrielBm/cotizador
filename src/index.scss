@@ -1,0 +1,228 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap");
+$bg: #8f384d;
+$bg-2: #dd9866;
+$color3: #5c6e91;
+$font-color: #eeeded;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background: $bg; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    $bg-2,
+    $bg
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, $bg-2, $bg);
+  font-family: "Inconsolata", monospace;
+  font-weight: 200;
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+  padding: none;
+  margin: none;
+}
+span.resultado {
+  position: relative;
+  width: 100%;
+}
+.resultado-enter {
+  transition: 0.5s;
+}
+.resultado-enter.resultado-enter-active {
+  transform: translateY(0%);
+}
+.resultado-exit {
+  transform: translateY(0);
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.resultado-exit-active {
+  opacity: 0;
+  transform: translateY(-10%);
+}
+.wrapperSelects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .labels {
+    color: $font-color;
+    font-weight: 400;
+  }
+}
+.wrapperSelects:not(:last-child) {
+  margin-bottom: 1rem;
+  .wrapperInputs {
+    display: flex;
+    justify-content: space-around;
+    .inputText {
+      margin-right: 0.3rem;
+      font-weight: 400;
+    }
+  }
+}
+.WrapperCotizador {
+  padding: 1rem;
+  text-align: center;
+  background-color: $bg;
+  color: #fff;
+  margin-top: 1rem;
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .wrapperList {
+    .Item {
+      font-size: 1.2rem;
+      .text {
+        color: $font-color;
+      }
+    }
+  }
+}
+.wrapperResultado {
+  padding: 1rem;
+  text-align: center;
+  background-color: $bg;
+  color: $font-color;
+  margin-top: 1rem;
+  .resultado {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+  }
+}
